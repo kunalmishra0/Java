@@ -1,3 +1,5 @@
+//12th Percentage calculator
+
 import java.util.Scanner;
 
 public class ex1{
@@ -13,5 +15,6 @@ public class ex1{
         }
         int percentage=sum/5;
         System.out.printf("Percentage:%d",percentage);
+        sc.close();
     }
 }

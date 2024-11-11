@@ -1,11 +1,13 @@
+//Basic calculations
+
 import java.util.Scanner;
  
 public class ps1{
     public static void main(String[] args){
         Scanner sc= new Scanner(System.in);
         
-        //q1: Sum of 3 numbers.
-        int a,b,c,sum=0;
+        //1. Sum of 3 numbers.
+        int a,b,c,sum0=0;
         System.out.println("Enter value for a:");
         a=sc.nextInt();
 
@@ -15,11 +17,11 @@ public class ps1{
         System.out.println("Enter value for c:");
         c=sc.nextInt();
 
-        sum=a+b+c;
-        System.out.printf("Sum:%d",sum);
+        sum0=a+b+c;
+        System.out.printf("Sum:%d",sum0);
         
 
-        //q2: CGPA calculator for 3 subjects.
+        //2. CGPA calculator for 3 subjects.
         float[] marks= new float[3];
         float CGPA,sum=0;
 
@@ -34,19 +36,19 @@ public class ps1{
         System.out.printf("CGPA: %f",CGPA);
        
 
-        //q3: Greeting message.
+        //3. Greeting message.
         System.out.println("Enter your name:");
         String name=sc.nextLine();
         System.out.printf("Hello %s!",name);
          
 
-         //q4 Kilometers to miles.
-         System.out.println("Enter distance in KM:");
-         float km=sc.nextFloat();
-         System.out.printf("Distance in miles:%f",km*0.62137119);
+        //4. Kilometers to miles.
+        System.out.println("Enter distance in KM:");
+        float km=sc.nextFloat();
+        System.out.printf("Distance in miles:%f",km*0.62137119);
         
 
-        //q5 Check whether user input is INT or NOT.
+        //5. Check whether user input is INT or NOT.
         System.out.println("Enter value:");
         if(sc.hasNextInt()){
             System.out.println("Input is integer!");
@@ -54,6 +56,6 @@ public class ps1{
         else{
             System.out.println("Input is not integer!");
         }
-        
+        sc.close();
     }
 }
