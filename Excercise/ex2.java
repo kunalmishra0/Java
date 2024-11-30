@@ -34,7 +34,7 @@ public class ex2 {
             System.out.printf("Your choice: %s\n", Options[userChoice]);
             System.out.printf("Computer choice: %s\n", Options[computerChoice]);
 
-            // Determine the result
+            // ⭐⭐Determine the result
             if (userChoice == computerChoice) {
                 System.out.println("Tie!");
             } else if ((userChoice - computerChoice + 3) % 3 == 1) {
@@ -43,7 +43,7 @@ public class ex2 {
                 System.out.println("You lose!");
             }
 
-            System.out.println(); // Add a blank line for readability between rounds
+            System.out.println(); 
         }
 
         sc.close();

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class ps4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         // 1. Check wether pass or fail.(Min passsing criteria: 33% per subject, 40% in total)
         int[] subjects = new int[3];
         int total = 0;
@@ -30,13 +31,24 @@ public class ps4 {
         
         System.out.println("Enter your annual salary in lakhs.");
         float salary = sc.nextFloat();
+        float tax =0.0f;
 
-        if(salary<2.5f){
-            System.out.println("No tax!");
+        if(salary>2.5f && salary<=5.0f){
+            tax= tax+ 0.05f*(salary-2.5f);
         }
-        else if(salary)
-        
+        else if(salary>5.0f && salary<=10.0f){
+            tax= tax+ 0.05f*(5.0f-2.5f);
+            tax= tax+ 0.2f*(salary-5.0f);
+        }
+        else if(salary>10.0f){
+            tax= tax+ 0.05f*(5.0f-2.5f);
+            tax= tax+ 0.05f*(10.0f-5.0f);
+            tax= tax+ 0.3f*(salary-10.0f);
+        }
 
+        System.out.printf("The total tax to be paid: %f ",tax);
+        
+         
         //3. Tell day of the week from number.
         System.out.println("Enter no for day of the week:");
         int no= sc.nextInt();
@@ -69,6 +81,7 @@ public class ps4 {
         else{
             System.out.println("Cannot determine website ending!");
         }
+
         sc.close();
     }
 }
